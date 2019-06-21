@@ -1,4 +1,5 @@
 body{
+  position: relative;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,7 +20,7 @@ header img{
 header a{
   float: right;
   margin-right: 17px;
-  margin-top: 6px;
+  margin-top: 7px;
   font: arial,helvetica;
   font-size: 13px;
   color: #333;
@@ -28,9 +29,10 @@ header a{
 
 header a:hover{
   color: #808080;
+  text-decoration: underline;
 }
 
-.gmail-icon{
+#gmail-icon{
   border-radius: 50%;
   width: 30px;
   float: right;
@@ -39,7 +41,7 @@ header a:hover{
   cursor: pointer;
 }
 
-.header-icons{
+#header-icons{
   float: right;
   width: 200px;
   margin-top: 15px;
@@ -55,41 +57,34 @@ i{
   float: right;
 }
 
-.header-icons i:hover{
+#header-icons i:hover{
   color: #000;
 }
 
-.header-btn{r
-  font-weight: bold;
-  background: #4484f1;
-  padding: 8px;
-  color: #fff;
-  border-radius: 20%;
-}
-
 main{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
   font-family: sans-serif;
   padding: 20px;
+  margin: 20px;
 }
 
-.google-logo img{
-  margin-top: 150px;
-  width: 272px;
+#google-logo img{
+  max-width: 100%;
   cursor: pointer;
 }
 
-.search-box{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 550px;
+#search-box{
+  width: 560px;
   height: 23px;
   border-radius: 50px;
   padding: 10px;
   border: 1px solid #dfe1e5;
 }
 
-.search-box input{
+#search-box input{
   border: none;
   outline: none;
   font-size: 17px;
@@ -99,81 +94,73 @@ main{
   line-height: 34px;
 }
 
-.search-box:hover,
-.search-box:focus{
+#search-box:hover,
+#search-box:focus{
   border: 1px solid #FFFFFF;
   box-shadow: 0px 1px 8px 0px #C8C8C8;
 }
 
-.search-box img{
-  margin-left: 15px;
+#search-box img{
+  margin-left: 25px;
   height: 24px;
   width: 24px;
 }
 
-.footer{
+button {
+  border-radius: 5px;
+  border: 1px solid #f2f2f2;
+  background-color: #f2f2f2;
+  color: #5f6368;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  margin: 28px 4px;
+  min-width: 54px;
+  padding: 0 16px;
+  height: 36px;
+  line-height: 27px;
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+  color: black;
+  border: solid 1px #c8c8c8;
+}
+
+#change-lang{
+  font-family: arial,sans-serif;
+  font-size: 13px;
+}
+
+#change-lang a{
+  text-decoration: underline
+}
+
+
+footer{
+  display: block;
+  position: fixed;
+  bottom: 0;
+  line-height: 40px;
+  min-width: 980px;
+  border-top: 1px solid #e4e4e4;
   background: #f2f2f2;
-  margin-top: 100px;
-  padding: 20px;
-  color: #000;
-  text-decoration: none;
 }
 
-.Country{
-  font-size: 15px;
+#footer-links a{
+  display: inline-block;
+  color: #5f6368;
 }
 
-.footer-right{
+#country{
+  border-bottom: 1px solid #e4e4e4;
+  margin-left: 30px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+#footer-right{
   float: right;
-}
-
-.button
-{
-	width: 150px;
-	padding: 10px;
-	background-color: #FF8C00;
-	box-shadow: -8px 8px 10px 3px rgba(0,0,0,0.2);
-    font-weight:bold;
-	text-decoration:none;
-}
-#cover{
-    position:fixed;
-    top:0;
-    left:0;
-    background:rgba(0,0,0,0.6);
-    z-index:5;
-    width:100%;
-    height:100%;
-    display:none;
-}
-#loginScreen
-{
-    height:380px;
-    width:340px;
-    margin:0 auto;
-    position:relative;
-    z-index:10;
-    display:none;
-	background: url(login.png) no-repeat;
-	border:5px solid #cccccc;
-	border-radius:10px;
-}
-#loginScreen:target, #loginScreen:target + #cover{
-    display:block;
-    opacity:2;
-}
-.cancel
-{
-    display:block;
-    position:absolute;
-    top:3px;
-    right:2px;
-    background:rgb(245,245,245);
-    color:black;
-    height:30px;
-    width:35px;
-    font-size:30px;
-    text-decoration:none;
-    text-align:center;
-    font-weight:bold;
+  white-space: nowrap;
+  margin-right: 30px;
 }
